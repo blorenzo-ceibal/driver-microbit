@@ -1,0 +1,111 @@
+\documentclass[12pt,twoside,a4paper]{book}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+%\usepackage[normal,footnotesize,bf]{caption3}
+\usepackage{caption3}
+\usepackage{float}
+\usepackage[pdftex]{graphicx}
+\usepackage[shortcuts]{extdash}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+%\usepackage{pdfsync} % does not provide forward search 
+\usepackage{srcltx}   % does     provide forward search 
+\usepackage{adjustbox}
+\usepackage{verbatimbox}
+\usepackage{caption}
+\usepackage[numbib, numindex]{tocbibind}%[nottoc,
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage[pdftex,bookmarks=true,bookmarksnumbered=true,hypertexnames=false,breaklinks=true,linkbordercolor={0 0 1}]{hyperref}
+\hypersetup{pdfauthor={Ward van Wanrooij},
+  pdftitle={The C Book},
+  pdfsubject={The C Book}}
+
+\pdfadjustspacing=1
+\raggedbottom
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\fvset{fontsize=\footnotesize}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[EL,OR]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\fancypagestyle{plain}{}
+\setlength{\headheight}{28pt}
+\setlength{\parindent}{0in}
+
+
+\newfloat{program}{tbhp}{prg}[chapter]
+\floatname{program}{Program}
+
+% keywords 
+\newcommand{\auto} {\texttt{auto}}
+\newcommand{\kbreak}{\texttt{break}} % command 
+\newcommand{\case} {\texttt{case}}   % command 
+\newcommand{\kchar} {\texttt{char}}  % type 
+\newcommand{\const}{\texttt{const}}
+\newcommand{\continue}{\texttt{continue}} % command 
+\newcommand{\default}{\texttt{default}}
+\newcommand{\kdo}    {\texttt{do}}        % command **** mysterious:\do does not
+
+\newcommand{\double}{\texttt{double}} % type 
+\newcommand{\kelse}{\texttt{else}}    % command 
+\newcommand{\enum}{\texttt{enum}}     % type 
+\newcommand{\extern}{\texttt{extern}}
+\newcommand{\float}{\texttt{float}} % type 
+\newcommand{\for}{\texttt{for}}     % command 
+\newcommand{\goto}{\texttt{goto}}   % command 
+\newcommand{\kif}{\texttt{if}}      % command 
+
+\newcommand{\kint}{\texttt{int}}   % type 
+\newcommand{\klong}{\texttt{long}} % type 
+\newcommand{\register}{\texttt{register}}
+\newcommand{\return}{\texttt{return}} % command 
+\newcommand{\short}{\texttt{short}}   % type 
+\newcommand{\signed}{\texttt{signed}} % type 
+\newcommand{\sizeof}{\texttt{sizeof}} % function
+\newcommand{\static}{\texttt{static}}
+    
+\newcommand{\struct}{\texttt{struct}} % type 
+\newcommand{\switch}{\texttt{switch}} % command 
+\newcommand{\typedef}{\texttt{typedef}}
+\newcommand{\union}{\texttt{union}}
+\newcommand{\unsigned}{\texttt{unsigned}} % type 
+\newcommand{\void}{\texttt{void}}         % type 
+\newcommand{\volatile}{\texttt{volatile}}
+\newcommand{\while}{\texttt{while}}       % command 
+
+\newcommand{\pp}{\texttt{++}}
+\newcommand{\mm}{\texttt{-{}-}}
+
+
+
+
+
+\begin{document}
+\frontmatter
+\title{The C Book\thanks{Conversion to TeX and editing by Ward van Wanrooij.\newline This version contains changes up to 2020-07-21.\newline The latest version is available at https://github.com/wardvanwanrooij/thecbook}}
+\author{Mike Banahan \and Declan Brady \and Mark Doran}
+\date{January 1991}
+\maketitle
+\pdfbookmark[1]{Preamble}{prea}
+\newpage
+\pdfbookmark[1]{Contents}{toc}
+\setcounter{page}{1}
+\tableofcontents
+\mainmatter
+\include{book}
+
+
+\bibliographystyle{apalike}
+\bibliography{bib}{}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
