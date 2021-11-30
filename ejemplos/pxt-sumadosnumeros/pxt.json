@@ -1,0 +1,14 @@
+{
+    "name": "pxt-sumadosnumeros",
+    "description": "Suma dos números y devuelve el resultado",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "main.ts"
+    ],
+    "testFiles": [
+        "tests.ts"
+      ],
+    "public": true
+}
